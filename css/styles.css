@@ -5,8 +5,11 @@
   --dystopianYellowFaded: rgb(221, 188, 0, 0.1);
   --lightGrey: rgb(165, 165, 165);
   --darkerGrey: rgb(73, 73, 73);
+  --blackText: rgb(0, 0, 0);
   --greyBackground: rgb(22, 22, 22);
+  --whiteBackground: rgb(255, 255, 255);
   --greyTransparent: rgba(0, 0, 0, 0.5);
+  --whiteTransparent: rgba(255, 255, 255, 0.5);
   --curlyBracesWidth: 1px;
   --curlyBracesOffset: 24px;
   --curlyBracesMajorCurve: 30px;
@@ -17,7 +20,7 @@ html,
 body {
   color: white;
   font-size: 12px;
-  background-color: var(--greyBackground);
+  background-color: var(--whiteBackground);
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   overflow-x: hidden;
@@ -45,7 +48,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 15px;
   padding: 0 4px;
   color: var(--dystopianYellow);
-  background-color: var(--greyTransparent);
+  background-color: var(--whiteTransparent);
   border: 1px solid var(--dystopianYellow);
   z-index: 2;
   cursor: pointer;
@@ -66,7 +69,7 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   display: flex;
   align-items: center;
-  background-color: var(--greyTransparent);
+  background-color: var(--whiteTransparent);
   justify-content: flex-end;
   width: 100vw;
   text-align: right;
@@ -118,7 +121,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .introTitle {
-  color: var(--lightGrey);
+  color: var(--blackText);
   font-size: 30px;
   width: 100%;
   font-weight: bold;
@@ -206,7 +209,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .introText {
-  color: var(--lightGrey);
+  color: var(--blackText);
   font-size: 16px;
 }
 
@@ -310,13 +313,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .workTitle {
-  color: var(--lightGrey);
+  color: var(--blackText);
   font-size: 30px;
 }
 
 .workText {
   font-size: 14px;
-  color: var(--lightGrey);
+  color: var(--blackText);
 }
 
 .workTechnologyContainer {
@@ -533,6 +536,46 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid var(--dystopianYellow);
 }
 
+#navButton1 {
+  animation: floatout 3s forwards;
+  font-weight: bold;
+}
+
+@keyframes floatout {
+  0% {
+    color: white;
+  }
+  50% {
+    color: var(--greyBackground);
+  }
+  100% {
+    color: black;
+  }
+}
+
+.shiftRight {
+  animation: floatRight 0.5s forwards;
+}
+@keyframes floatRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.shiftLeft {
+  animation: floatLeft 0.5s forwards;
+}
+@keyframes floatLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @media (min-width: 768px) {
   .tags {
     font-size: 20px;
@@ -607,8 +650,19 @@ body::-webkit-scrollbar-thumb {
   .workCard {
     flex-direction: row;
     justify-content: center;
-    margin: auto;
-    padding: 15px 0;
+    margin: 5px;
+    padding: 15px 50px;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+  }
+  .workCard1 {
+    background-color: #dacfe5;
+  }
+  .workCard2 {
+    background-color: #ffc28a;
+  }
+  .workCard3 {
+    background-color: #ffe48c;
   }
 
   .workTitle {
@@ -649,7 +703,7 @@ body::-webkit-scrollbar-thumb {
 
   .workCardDescriptionContainer {
     padding-right: 15px;
-    min-width: 40vw;
+    /* min-width: 40vw; */
   }
 
   .contactContainer {
