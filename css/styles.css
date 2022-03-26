@@ -65,11 +65,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navBar {
-  color: var(--lightGrey);
+  color: white;
   position: fixed;
   display: flex;
   align-items: center;
-  background-color: var(--whiteTransparent);
+  /* background-color: var(--whiteTransparent); */
   justify-content: flex-end;
   width: 100vw;
   text-align: right;
@@ -84,15 +84,16 @@ body::-webkit-scrollbar-thumb {
   padding: 0 5px;
   margin-right: 2px;
   cursor: pointer;
-  color: var(--lightGrey);
+  color: black;
   border: 1px solid transparent;
+  font-weight: bold;
 }
 
 .navListItem:hover {
-  color: var(--dystopianYellow);
+  color: var(--blackText);
   border: 1px solid;
   text-decoration: none;
-  border: 1px solid var(--dystopianYellow);
+  border: 1px solid var(--blackText);
   animation: hoverBlink 0.1s forwards;
 }
 
@@ -100,16 +101,11 @@ body::-webkit-scrollbar-thumb {
   0% {
   }
   20% {
-    background-color: var(--dystopianYellow);
     color: white;
   }
   100% {
-    background-color: var(--dystopianYellowFaded);
+    color: var(--blackText);
   }
-}
-
-.resumeNav {
-  border: 1px solid var(--dystopianYellow);
 }
 
 .revealHeadYellow {
@@ -443,7 +439,8 @@ body::-webkit-scrollbar-thumb {
   padding: 2px 6px;
   text-decoration: none;
   color: var(--lightGrey);
-  border: 1px solid var(--lightGrey);
+  background-color: #fdda24;
+  /* border: 1px solid var(--lightGrey); */
   cursor: pointer;
 }
 
@@ -536,9 +533,8 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid var(--dystopianYellow);
 }
 
-#navButton1 {
+.navFloatOut {
   animation: floatout 3s forwards;
-  font-weight: bold;
 }
 
 @keyframes floatout {
@@ -550,6 +546,22 @@ body::-webkit-scrollbar-thumb {
   }
   100% {
     color: black;
+  }
+}
+.navFloatOutWithResume {
+  animation: floatoutResume 2s forwards;
+}
+
+@keyframes floatoutResume {
+  0% {
+    color: white;
+  }
+  50% {
+    color: var(--greyBackground);
+  }
+  100% {
+    color: black;
+    border: 1px solid var(--blackText);
   }
 }
 
@@ -655,6 +667,11 @@ body::-webkit-scrollbar-thumb {
     /* border: 1px solid black; */
     border-radius: 15px;
   }
+  .workCard:hover {
+    opacity: 50%;
+    cursor: pointer;
+  }
+
   .workCard1 {
     background-color: #dacfe5;
   }
