@@ -276,7 +276,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 95vw;
+  width: 100vw;
   margin: 0 auto;
 }
 
@@ -775,7 +775,11 @@ body::-webkit-scrollbar-thumb {
   .helloTest {
     position: absolute;
     color: black;
+    padding-top: 400px;
     border: 1px solid black;
-    transform: translateX(95%);
+    transform: translateX(100%);
+  }
+  .helloTest:hover {
+    background-color: pink;
   }
 }

@@ -79,8 +79,10 @@ function navReveal(id, time, option) {
   }, time);
 }
 
-attachEventListener('work1', 'homePage', 'helloTest', shiftLeft);
-attachEventListener('work2', 'homePage', null, shiftLeft);
+attachEventListener('work1', 'homePage', null, shiftToWork);
+attachEventListener('work2', 'homePage', null, shiftToWork);
+attachEventListener('helloTest', 'homePage', null, shiftToHome);
+attachEventListener('myLogo', 'homePage', null, shiftToHome);
 
 //Add event listener
 function attachEventListener(targetId, shiftId, revealId, motion) {
@@ -89,13 +91,21 @@ function attachEventListener(targetId, shiftId, revealId, motion) {
   });
 }
 
-//shift right
-function shiftLeft(shiftId, revealId) {
-  // if (document.getElementById(shiftId).classList.includes('shiftLeft')) {
-  //   document.getElementById(shiftId).classList.remove('shiftLeft');
-  // }
+//shift left
+function shiftToWork(shiftId, revealId) {
+  if (document.getElementById('homePage').classList.contains('shiftRightOut')) {
+    document.getElementById('homePage').classList.remove('shiftRightOut');
+  }
   document.getElementById(shiftId).classList.add('shiftLeftOut');
-  document.getElementById(revealId).classList.add('shiftRightOut');
+  //Add which to reveal
+}
+//shift Home
+function shiftToHome(shiftId, revealId) {
+  if (document.getElementById('homePage').classList.contains('shiftLeftOut')) {
+    document.getElementById('homePage').classList.remove('shiftLeftOut');
+  }
+  document.getElementById('homePage').classList.add('shiftRightOut');
+  //add hide all work
 }
 
 // Skill images reveal style
