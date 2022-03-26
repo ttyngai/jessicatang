@@ -46,16 +46,21 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   top: 0;
   font-size: 15px;
-  padding: 0 4px;
-  color: var(--dystopianYellow);
-  background-color: var(--whiteTransparent);
-  border: 1px solid var(--dystopianYellow);
+  padding: 4px;
+  color: var(--blackText);
+  /* background-color: var(--whiteTransparent); */
+  /* border: 1px solid var(--dystopianYellow); */
   z-index: 2;
   cursor: pointer;
+  font-weight: Bold;
 }
 
 .myLogo:hover {
-  animation: hoverBlink 0.1s forwards;
+  /* animation: hoverBlink 0.1s forwards; */
+}
+
+.logo {
+  height: 40px;
 }
 
 .tags {
@@ -75,26 +80,28 @@ body::-webkit-scrollbar-thumb {
   text-align: right;
   list-style: none;
   padding-right: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   top: 0;
   font-size: 15px;
   z-index: 1;
 }
 
 .navListItem {
-  padding: 0 5px;
+  /* padding: 0 5px; */
   margin-right: 2px;
   cursor: pointer;
-  color: black;
-  border: 1px solid transparent;
+  color: white;
+  border: 2px solid transparent;
   font-weight: bold;
 }
 
 .navListItem:hover {
   color: var(--blackText);
-  border: 1px solid;
+
   text-decoration: none;
-  border: 1px solid var(--blackText);
-  animation: hoverBlink 0.1s forwards;
+  border-bottom: 2px solid var(--blackText);
+  /* animation: hoverBlink 0.1s forwards; */
 }
 
 @keyframes hoverBlink {
@@ -138,8 +145,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .avatar {
-  height: 240px;
-  width: 220px;
+  /* height: 240px; */
+  width: 40vw;
+  max-width: 400px;
   padding: 10px 0;
 }
 
@@ -329,6 +337,10 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-evenly;
   align-items: flex-end;
   padding-top: 20px;
+}
+
+.projectImage {
+  width: 200px;
 }
 
 .imageReveal1 {
@@ -561,8 +573,16 @@ body::-webkit-scrollbar-thumb {
   }
   100% {
     color: black;
-    border: 1px solid var(--blackText);
+    border: 2px solid var(--blackText);
   }
+}
+.resumeNav {
+  /* border: 2px solid var(--blackText); */
+
+  padding: 0 5px;
+}
+.resumeNav:hover {
+  background-color: pink;
 }
 
 .shiftRight {
@@ -576,15 +596,26 @@ body::-webkit-scrollbar-thumb {
     transform: translateX(100%);
   }
 }
-.shiftLeft {
-  animation: floatLeft 0.5s forwards;
+.shiftLeftOut {
+  animation: floatLeftOut 0.5s forwards;
 }
-@keyframes floatLeft {
+@keyframes floatLeftOut {
   0% {
     transform: translateX(0%);
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+.shiftRightOut {
+  animation: floatRightOut 0.5s forwards;
+}
+@keyframes floatRightOut {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 
@@ -596,7 +627,7 @@ body::-webkit-scrollbar-thumb {
   .introWithAvatar {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .pageContainer {
@@ -638,11 +669,12 @@ body::-webkit-scrollbar-thumb {
 
   .navBar {
     font-size: 18px;
-    padding-right: 4px;
+    padding-right: 10px;
   }
 
   .navListItem {
-    padding: 0 10px;
+    /* padding: 0 5px; */
+    margin: 0 10px;
   }
 
   .backToTop {
@@ -738,5 +770,12 @@ body::-webkit-scrollbar-thumb {
 
   .contactText {
     font-size: 20px;
+  }
+
+  .helloTest {
+    position: absolute;
+    color: black;
+    border: 1px solid black;
+    transform: translateX(95%);
   }
 }

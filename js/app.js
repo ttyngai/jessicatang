@@ -62,30 +62,49 @@ function scrollEvent(elementId, top, target) {
 }
 
 //Nav reveal
-
-navReveal('navButton1', 0);
-navReveal('navButton2', 200);
-navReveal('navButton3', 400);
-navReveal('navButton4', 600);
-navReveal('navButton5', 800, 'resume');
+navReveal('navButton1', 400);
+navReveal('navButton2', 600);
+navReveal('navButton3', 800);
+navReveal('navButton4', 1000);
+navReveal('navButton5', 1200, 'resume');
 
 function navReveal(id, time, option) {
   setTimeout(function () {
     if (option == 'resume') {
       document.getElementById(id).classList.add('navFloatOutWithResume');
+      document.getElementById(id).classList.add('resumeNav');
     } else {
       document.getElementById(id).classList.add('navFloatOut');
     }
   }, time);
 }
 
+attachEventListener('work1', 'homePage', 'helloTest', shiftLeft);
+attachEventListener('work2', 'homePage', null, shiftLeft);
+
+//Add event listener
+function attachEventListener(targetId, shiftId, revealId, motion) {
+  document.getElementById(targetId).addEventListener('click', function () {
+    motion(shiftId, revealId);
+  });
+}
+
+//shift right
+function shiftLeft(shiftId, revealId) {
+  // if (document.getElementById(shiftId).classList.includes('shiftLeft')) {
+  //   document.getElementById(shiftId).classList.remove('shiftLeft');
+  // }
+  document.getElementById(shiftId).classList.add('shiftLeftOut');
+  document.getElementById(revealId).classList.add('shiftRightOut');
+}
+
 // Skill images reveal style
-skillImageShow('skillLogo1', 0, `imageReveal${random(1, 6)}`);
-skillImageShow('skillLogo2', 0, `imageReveal${random(1, 6)}`);
-skillImageShow('skillLogo3', 0, `imageReveal${random(1, 6)}`);
-skillImageShow('skillLogo4', 0, `imageReveal${random(1, 6)}`);
-skillImageShow('skillLogo5', 0, `imageReveal${random(1, 6)}`);
-skillImageShow('skillLogo6', 0, `imageReveal${random(1, 6)}`);
+// skillImageShow('skillLogo1', 0, `imageReveal${random(1, 6)}`);
+// skillImageShow('skillLogo2', 0, `imageReveal${random(1, 6)}`);
+// skillImageShow('skillLogo3', 0, `imageReveal${random(1, 6)}`);
+// skillImageShow('skillLogo4', 0, `imageReveal${random(1, 6)}`);
+// skillImageShow('skillLogo5', 0, `imageReveal${random(1, 6)}`);
+// skillImageShow('skillLogo6', 0, `imageReveal${random(1, 6)}`);
 
 function skillImageShow(elementId, delayTime, method) {
   setTimeout(function () {
@@ -102,6 +121,11 @@ function revealPlaceholder() {
   });
 }
 
+let navHidePause;
+setTimeout(function () {
+  navHidePause = true;
+}, 1000);
+
 // Activate nav bar when first loads
 document.getElementById('navBar').classList.add('showNav');
 document.getElementById('navBar').classList.remove('showNav');
@@ -110,17 +134,16 @@ document.getElementById('navBar').classList.remove('showNav');
 let prevMouseY = 100;
 document.addEventListener('mousemove', (event) => {
   let currentMouseY = event.clientY;
-
-  if (event.clientY < 100 && currentMouseY < prevMouseY) {
+  if (
+    event.clientY < 100 &&
+    currentMouseY < prevMouseY &&
+    window.pageYOffset > 100
+  ) {
     document.getElementById('navBar').classList.add('showNav');
   }
   prevMouseY = currentMouseY;
 });
 
-let navHidePause;
-setTimeout(function () {
-  navHidePause = true;
-}, 4000);
 // Hiding nav bar
 let prevScrollpos = window.pageYOffset;
 let downAnchor = window.pageYOffset;
