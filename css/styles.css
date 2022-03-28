@@ -812,14 +812,16 @@ body::-webkit-scrollbar-thumb {
     width: 25vw;
   }
   .descriptionTitle {
-    margin: 20px;
+    margin: 0 10px;
     font-weight: bold;
     font-size: 16px;
+    z-index: 2;
   }
   .descriptionContent {
-    margin: 20px;
+    margin: 10px;
     font-size: 16px;
     font-weight: 300;
+    z-index: 2;
   }
   .descriptionContentBold {
     font-weight: bold;
@@ -827,11 +829,52 @@ body::-webkit-scrollbar-thumb {
   .descriptionCard {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin: 50px auto;
   }
+
   .descriptionCardContent {
-    width: 40vw;
+    width: 35vw;
+  }
+  .appDescription {
+    width: 50vw;
+  }
+  .personaContent {
+    width: 50vw;
+  }
+
+  .cardNumber {
+    position: absolute;
+    font-size: 300px;
+    text-align: center;
+    z-index: 1;
+    margin: -10vw 10vw 0 10vw;
+    color: rgba(250, 199, 90, 0.267);
+  }
+  .appImages {
+    width: 150px;
+  }
+
+  .interviewSection {
+    margin-bottom: 30px;
+  }
+  .interviewQuestions {
+    margin-left: 30px;
+  }
+  .eachInsight {
+    border-right: 1px dashed rgb(194, 194, 194);
+  }
+  .majorInsights {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+  }
+  .datingUsage {
+    display: flex;
+    flex-direction: row;
+  }
+  .starContainer {
+    margin-left: 10px;
   }
 }
