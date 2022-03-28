@@ -18,11 +18,10 @@
 
 html,
 body {
-  color: white;
+  color: var(--blackText);
   font-size: 12px;
   background-color: var(--whiteBackground);
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
-    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
 
@@ -306,7 +305,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 95vw;
+  /* width: 95vw; */
   max-width: 1024px;
   margin: auto;
   padding: 25px 0;
@@ -460,7 +459,7 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
   color: var(--dystopianYellow);
   animation: hoverBlink 0.1s forwards;
-  background-color: var(--dystopianYellowFaded);
+  background-color: pink;
 }
 
 .workButtonContainer {
@@ -700,7 +699,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 15px;
   }
   .workCard:hover {
-    opacity: 50%;
+    opacity: 70%;
     cursor: pointer;
   }
 
@@ -771,21 +770,68 @@ body::-webkit-scrollbar-thumb {
   .contactText {
     font-size: 20px;
   }
-}
 
-.projectContainer {
-  padding-top: 100px;
-  width: 90vw;
-  margin: auto;
-  max-width: 1024px;
-  display: none;
-}
-.project {
-  color: black;
-}
-.hideTarget {
-  display: none;
-}
-.revealTarget {
-  display: block;
+  .projectMotto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mottoTitle {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .mottoContent {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .projectContainer {
+    padding-top: 100px;
+    width: 75vw;
+    margin: auto;
+    max-width: 1024px;
+    display: none;
+  }
+  .project {
+    color: black;
+  }
+  .hideTarget {
+    display: none;
+  }
+  .revealTarget {
+    display: block;
+  }
+  .myRole {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    margin: 30px 30px 30px 0;
+  }
+  .eachRole {
+    width: 25vw;
+  }
+  .descriptionTitle {
+    margin: 20px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .descriptionContent {
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .descriptionContentBold {
+    font-weight: bold;
+  }
+  .descriptionCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px auto;
+  }
+  .descriptionCardContent {
+    width: 40vw;
+  }
 }
