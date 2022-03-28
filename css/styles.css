@@ -450,7 +450,7 @@ body::-webkit-scrollbar-thumb {
   margin: auto;
   padding: 2px 6px;
   text-decoration: none;
-  color: var(--lightGrey);
+  color: var(--blackText);
   background-color: #fdda24;
   /* border: 1px solid var(--lightGrey); */
   cursor: pointer;
@@ -476,7 +476,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contactTitle {
-  color: var(--lightGrey);
+  color: var(--blackText);
   font-size: 30px;
   font-weight: bold;
   line-height: 1.2;
@@ -484,7 +484,7 @@ body::-webkit-scrollbar-thumb {
 
 .contactText {
   font-size: 16px;
-  color: var(--lightGrey);
+  color: var(--blackText);
 }
 
 .backToTopContainer {

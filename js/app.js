@@ -84,18 +84,24 @@ function attachEventListener(button, targetId, revealId, method, scroll) {
   });
 }
 
-attachEventListener('work1', 'homePage', 'project1', changeElement);
-attachEventListener('work2', 'homePage', 'project2', changeElement);
+attachEventListener('work1', 'homePage', 'project1', changeElement, 'top');
+attachEventListener('work2', 'homePage', 'project2', changeElement, 'top');
 attachEventListener('goBack1', 'project1', 'homePage', changeElement, 'work1');
 attachEventListener('goBack2', 'project2', 'homePage', changeElement, 'work2');
 
 function changeElement(hideTarget, revealTarget, scroll) {
   document.getElementById(hideTarget).style.display = 'none';
   document.getElementById(revealTarget).style.display = 'block';
-  if (scroll) {
-    document
-      .getElementById(scroll)
-      .scrollIntoView({ block: 'center', behavior: 'smooth' });
+  if (scroll == 'top') {
+    window.scrollTo({
+      top: 0,
+      // behavior: 'smooth',
+    });
+  } else if (scroll) {
+    document.getElementById(scroll).scrollIntoView({
+      block: 'center',
+      // behavior: 'smooth'
+    });
   }
 }
 
