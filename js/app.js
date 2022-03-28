@@ -13,12 +13,10 @@ function firstScroll() {
 scrollEvent('myLogo', 0);
 scrollEvent('navButton1', 0);
 scrollEvent('navButton2', 0, 'work1');
-scrollEvent('navButton3', 0);
+scrollEvent('navButton3', 0, 'work1');
 scrollEvent('introContactButton', 0, 'contact');
 scrollEvent('navButton4', 0, 'contact');
-scrollEvent('backToTop', 0);
 // scrollEvent('navButton6', 0, 'skillsContainer');
-
 function scrollEvent(elementId, top, target) {
   const element = document.getElementById(elementId);
   element.addEventListener('click', function () {
@@ -79,34 +77,62 @@ function navReveal(id, time, option) {
   }, time);
 }
 
-attachEventListener('work1', 'homePage', null, shiftToWork);
-attachEventListener('work2', 'homePage', null, shiftToWork);
-attachEventListener('helloTest', 'homePage', null, shiftToHome);
-attachEventListener('myLogo', 'homePage', null, shiftToHome);
-
 //Add event listener
-function attachEventListener(targetId, shiftId, revealId, motion) {
-  document.getElementById(targetId).addEventListener('click', function () {
-    motion(shiftId, revealId);
+function attachEventListener(button, targetId, revealId, method, scroll) {
+  document.getElementById(button).addEventListener('click', function () {
+    method(targetId, revealId, scroll);
   });
 }
 
-//shift left
-function shiftToWork(shiftId, revealId) {
-  if (document.getElementById('homePage').classList.contains('shiftRightOut')) {
-    document.getElementById('homePage').classList.remove('shiftRightOut');
+attachEventListener('work1', 'homePage', 'project1', changeElement);
+attachEventListener('work2', 'homePage', 'project2', changeElement);
+attachEventListener('goBack1', 'project1', 'homePage', changeElement, 'work1');
+attachEventListener('goBack2', 'project2', 'homePage', changeElement, 'work2');
+
+function changeElement(hideTarget, revealTarget, scroll) {
+  document.getElementById(hideTarget).style.display = 'none';
+  document.getElementById(revealTarget).style.display = 'block';
+  if (scroll) {
+    document
+      .getElementById(scroll)
+      .scrollIntoView({ block: 'center', behavior: 'smooth' });
   }
-  document.getElementById(shiftId).classList.add('shiftLeftOut');
-  //Add which to reveal
 }
-//shift Home
-function shiftToHome(shiftId, revealId) {
-  if (document.getElementById('homePage').classList.contains('shiftLeftOut')) {
-    document.getElementById('homePage').classList.remove('shiftLeftOut');
-  }
-  document.getElementById('homePage').classList.add('shiftRightOut');
-  //add hide all work
-}
+
+// //Add event listener
+// function attachEventListener(targetId, shiftId, revealId, motion) {
+//   document.getElementById(targetId).addEventListener('click', function () {
+//     motion(shiftId, revealId);
+//   });
+// }
+
+// //shift left
+// function shiftToWork(shiftId, revealId) {
+//   if (document.getElementById('homePage').classList.contains('shiftRightOut')) {
+//     document.getElementById('homePage').classList.remove('shiftRightOut');
+//   }
+//   window.jessicaPreviousScrollElement = revealId;
+//   console.log(window.jessicaPreviousScrollElement);
+//   document.getElementById(shiftId).classList.add('shiftLeftOut');
+//   window.scrollTo({
+//     top: 0,
+//     behavior: 'smooth',
+//   });
+//   //Add which to reveal
+// }
+// //shift Home
+// function shiftToHome(shiftId, revealId) {
+//   if (document.getElementById('homePage').classList.contains('shiftLeftOut')) {
+//     document.getElementById('homePage').classList.remove('shiftLeftOut');
+//   }
+//   document.getElementById('homePage').classList.add('shiftRightOut');
+
+//   document
+//     .getElementById(window.jessicaPreviousScrollElement)
+//     .scrollIntoView({ block: 'center', behavior: 'smooth' });
+
+//   //add hide all work
+// }
 
 // Skill images reveal style
 // skillImageShow('skillLogo1', 0, `imageReveal${random(1, 6)}`);
@@ -124,12 +150,12 @@ function skillImageShow(elementId, delayTime, method) {
 
 // Populate text as placeholder, so that spacings of website would be accurate
 // revealPlaceholder();
-function revealPlaceholder() {
-  let array = document.querySelectorAll('[data-text]');
-  array.forEach(function (element) {
-    element.innerHTML = element.dataset.text;
-  });
-}
+// function revealPlaceholder() {
+//   let array = document.querySelectorAll('[data-text]');
+//   array.forEach(function (element) {
+//     element.innerHTML = element.dataset.text;
+//   });
+// }
 
 let navHidePause;
 setTimeout(function () {
@@ -177,6 +203,6 @@ window.onscroll = function () {
 };
 
 // Helper function for random generation
-function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// function random(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
