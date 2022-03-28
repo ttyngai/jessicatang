@@ -92,7 +92,7 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   color: white;
   border: 2px solid transparent;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .navListItem:hover {
@@ -702,6 +702,10 @@ body::-webkit-scrollbar-thumb {
     opacity: 70%;
     cursor: pointer;
   }
+  .workCardNoHover:hover {
+    opacity: 100%;
+    cursor: default;
+  }
 
   .workCard1 {
     background-color: #dacfe5;
@@ -829,9 +833,9 @@ body::-webkit-scrollbar-thumb {
   .descriptionCard {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    margin: 50px auto;
+    margin: 25px auto;
   }
 
   .descriptionCardContent {
