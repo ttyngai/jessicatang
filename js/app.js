@@ -95,12 +95,12 @@ function changeElement(hideTarget, revealTarget, scroll) {
   if (scroll == 'top') {
     window.scrollTo({
       top: 0,
-      // behavior: 'smooth',
+      behavior: 'smooth',
     });
   } else if (scroll) {
     document.getElementById(scroll).scrollIntoView({
       block: 'center',
-      // behavior: 'smooth'
+      behavior: 'smooth',
     });
   }
 }

@@ -955,3 +955,7 @@ body::-webkit-scrollbar-thumb {
 .personaSide {
   margin: 5px;
 }
+
+.textInPersona {
+  color: black;
+}
