@@ -854,7 +854,8 @@ body::-webkit-scrollbar-thumb {
   z-index: 2;
 }
 .descriptionContentBold {
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-weight: 500;
 }
 .descriptionCard {
   display: flex;
@@ -875,11 +876,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cardNumber {
+  font-family: Verdana, 'Times New Roman', Times, serif;
   position: absolute;
   font-size: 300px;
   text-align: center;
   z-index: 1;
-  margin: -10vw 10vw 0 10vw;
+  margin: -150px 0px 0 50px;
   color: rgba(250, 199, 90, 0.267);
 }
 .appImages {
