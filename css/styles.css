@@ -321,7 +321,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .workText {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--blackText);
 }
 
@@ -339,7 +339,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .projectImage {
-  width: 200px;
+  max-width: 250px;
+  width: 30vw;
 }
 
 .imageReveal1 {
@@ -709,7 +710,8 @@ body::-webkit-scrollbar-thumb {
   cursor: default;
 }
 .projectImageHome {
-  width: 80%;
+  width: 100%;
+  max-width: 1024px;
   border-radius: 20px;
   cursor: pointer;
 }
@@ -809,7 +811,7 @@ body::-webkit-scrollbar-thumb {
 }
 .projectContainer {
   padding-top: 100px;
-  width: 75vw;
+  width: 90vw;
   margin: auto;
   max-width: 1024px;
   display: none;
@@ -843,13 +845,13 @@ body::-webkit-scrollbar-thumb {
   font-weight: bold;
   font-size: 16px;
   z-index: 2;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 3px;
   font-family: 'Nunito', 'Courier New', Courier, monospace;
 }
 .descriptionContent {
   margin: 10px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 200;
   z-index: 2;
 }
@@ -860,11 +862,15 @@ body::-webkit-scrollbar-thumb {
 .descriptionCard {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 25px auto;
+  margin: auto;
+  margin-top: 10px;
 }
-
+.appCard {
+  justify-content: center;
+  margin: 20px auto;
+}
 .descriptionCardContent {
   width: 35vw;
 }
@@ -886,10 +892,11 @@ body::-webkit-scrollbar-thumb {
 }
 .appImages {
   width: 150px;
+  margin-right: 20px;
 }
 
 .interviewSection {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .interviewQuestions {
   margin-left: 30px;
@@ -913,16 +920,38 @@ body::-webkit-scrollbar-thumb {
 }
 .grid-box {
   display: grid;
-  grid-gap: 20px;
+  /* grid-gap: 20px; */
   grid-template-columns: repeat(3, 1fr);
   margin: auto 10px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   font-weight: 300;
   font-size: 16px;
+}
+.cell {
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px;
 }
 .gridMargin {
   margin-left: 0;
 }
-.gridBorderRight {
-  border-right: 1px dashed black;
+.gridBorderLeft {
+  border-left: 1px dashed grey;
+}
+.personaImage {
+  width: 300px;
+  margin-right: 20px;
+}
+.themeLetterSpacing {
+  letter-spacing: 0px;
+}
+.personaSideBySide {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  font-weight: 200;
+  /* padding: 10px; */
+}
+.personaSide {
+  margin: 5px;
 }
