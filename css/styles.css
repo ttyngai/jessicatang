@@ -652,6 +652,9 @@ body::-webkit-scrollbar-thumb {
   }
 
   .introContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: auto;
     padding-top: 100px;
     padding-bottom: 30px;
@@ -705,6 +708,19 @@ body::-webkit-scrollbar-thumb {
   .workCardNoHover:hover {
     opacity: 100%;
     cursor: default;
+  }
+  .projectImageHome {
+    width: 80%;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .projectImageHome:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+  .projectImageDetail {
+    width: 100%;
+    border-radius: 20px;
   }
 
   .workCard1 {
@@ -879,6 +895,8 @@ body::-webkit-scrollbar-thumb {
     flex-direction: row;
   }
   .starContainer {
+    /* font-size: 50px; */
     margin-left: 10px;
+    color: rgb(252, 238, 50);
   }
 }
