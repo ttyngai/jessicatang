@@ -797,11 +797,15 @@ body::-webkit-scrollbar-thumb {
 }
 .mottoTitle {
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 600;
+  /* font-weight: bold; */
 }
 .mottoContent {
   font-size: 16px;
   font-weight: bold;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-family: 'Nunito', 'Courier New', Courier, monospace;
 }
 .projectContainer {
   padding-top: 100px;
@@ -819,6 +823,10 @@ body::-webkit-scrollbar-thumb {
 .revealTarget {
   display: block;
 }
+.bulletPoints {
+  display: flex;
+  flex-direction: row;
+}
 .myRole {
   display: flex;
   flex-direction: row;
@@ -835,11 +843,14 @@ body::-webkit-scrollbar-thumb {
   font-weight: bold;
   font-size: 16px;
   z-index: 2;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-family: 'Nunito', 'Courier New', Courier, monospace;
 }
 .descriptionContent {
   margin: 10px;
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 200;
   z-index: 2;
 }
 .descriptionContentBold {
