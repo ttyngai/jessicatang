@@ -86,8 +86,12 @@ function attachEventListener(button, targetId, revealId, method, scroll) {
 
 attachEventListener('work1', 'homePage', 'project1', changeElement, 'top');
 attachEventListener('work2', 'homePage', 'project2', changeElement, 'top');
+attachEventListener('work3', 'homePage', 'project3', changeElement, 'top');
+attachEventListener('work4', 'homePage', 'project4', changeElement, 'top');
 attachEventListener('goBack1', 'project1', 'homePage', changeElement, 'work1');
 attachEventListener('goBack2', 'project2', 'homePage', changeElement, 'work2');
+attachEventListener('goBack3', 'project3', 'homePage', changeElement, 'work3');
+attachEventListener('goBack4', 'project4', 'homePage', changeElement, 'work4');
 
 function changeElement(hideTarget, revealTarget, scroll) {
   document.getElementById(hideTarget).style.display = 'none';
