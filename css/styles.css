@@ -677,6 +677,7 @@ body::-webkit-scrollbar-thumb {
   /* border: 1px solid var(--lightGrey); */
   cursor: pointer;
   box-shadow: 5px 5px #888888;
+  font-weight: bold;
 }
 
 .squareButton:hover {
@@ -686,7 +687,7 @@ body::-webkit-scrollbar-thumb {
   /* animation: buttonHover 0.1s forwards; */
   padding-top: 6px;
   padding-left: 10px;
-  box-shadow: 2px 2px #b3b3b3;
+  box-shadow: 3px 3px #b3b3b3;
 }
 
 .myLogo {
