@@ -677,6 +677,8 @@ body::-webkit-scrollbar-thumb {
   color: var(--blackText);
   background-color: pink;
   /* animation: buttonHover 0.1s forwards; */
+  padding-top: 1px;
+  padding-left: 6px;
   box-shadow: 2px 2px #b3b3b3;
 }
 
