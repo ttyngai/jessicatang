@@ -95,6 +95,39 @@ document.addEventListener('auxclick', function (e) {
     });
   }
 });
+document.getElementById('navButton1').addEventListener('click', function () {
+  document.getElementById('project1').style.display = 'none';
+  document.getElementById('project2').style.display = 'none';
+  document.getElementById('project3').style.display = 'none';
+  document.getElementById('project4').style.display = 'none';
+  document.getElementById('homePage').style.display = 'block';
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
+document.getElementById('navButton2').addEventListener('click', function () {
+  document.getElementById('project1').style.display = 'none';
+  document.getElementById('project2').style.display = 'none';
+  document.getElementById('project3').style.display = 'none';
+  document.getElementById('project4').style.display = 'none';
+  document.getElementById('homePage').style.display = 'block';
+  document.getElementById('work1').scrollIntoView({
+    block: 'center',
+    behavior: 'smooth',
+  });
+});
+document.getElementById('navButton3').addEventListener('click', function () {
+  document.getElementById('project1').style.display = 'none';
+  document.getElementById('project2').style.display = 'none';
+  document.getElementById('project3').style.display = 'none';
+  document.getElementById('project4').style.display = 'none';
+  document.getElementById('homePage').style.display = 'block';
+  document.getElementById('contact').scrollIntoView({
+    block: 'center',
+    behavior: 'smooth',
+  });
+});
 
 document.getElementById('myLogo').addEventListener('click', function () {
   document.getElementById('project1').style.display = 'none';

@@ -1170,7 +1170,7 @@ body::-webkit-scrollbar-thumb {
   }
   .projectContainer {
     width: 95vw;
-    min-width: 400px;
+    /* min-width: 400px; */
   }
   .personaImage {
     margin: 10px auto;
