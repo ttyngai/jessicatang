@@ -1096,9 +1096,63 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 800px) {
+  .navListItem {
+    padding: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .navBar {
+    font-size: 14px;
+  }
+  .myLogo {
+    font-size: 14px;
+    padding-top: 4px;
+    padding-left: 4px;
+  }
+  .contactContainer {
+    width: 95vw;
+    padding-top: 50px;
+  }
+
+  .introContainer {
+    padding-top: 80px;
+  }
+  .introWithAvatar {
+    flex-direction: column-reverse;
+  }
+  .introContent {
+    width: 90vw;
+  }
+  .avatar {
+    width: 60vw;
+  }
+  .descriptionCardContent {
+    width: 60vw;
+  }
+  .appDescription {
+    width: 70vw;
+  }
+  .appCard {
+    margin-left: 10px;
+    justify-content: flex-start;
+  }
+  .appImages {
+    width: 20vw;
+    max-width: 100px;
+  }
+  .personaCard {
+    flex-direction: column;
+  }
+  .personaContent {
+    width: 95vw;
+  }
   .projectContainer {
-    width: 99vw;
+    width: 95vw;
     min-width: 400px;
+  }
+  .personaImage {
+    margin: 10px auto;
   }
   .homeGridBox {
     display: block;
