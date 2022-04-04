@@ -1080,7 +1080,7 @@ body::-webkit-scrollbar-thumb {
 .dpjPictures2 {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
   text-align: center;
   text-decoration: underline;
@@ -1093,7 +1093,13 @@ body::-webkit-scrollbar-thumb {
 .dpjMainLogo {
   max-width: 200px;
 }
-
+.logoWithTitle {
+  display: flex;
+  flex-direction: column;
+}
+.logoTitleMargin {
+  margin-bottom: 10px;
+}
 .dpjPictures {
   margin: 10px;
 }
