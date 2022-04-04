@@ -1108,7 +1108,9 @@ body::-webkit-scrollbar-thumb {
   .myRole {
     margin: 10px 0;
   }
-
+  .cardNumber {
+    margin: -120px 0px 0 40px;
+  }
   .navBar {
     font-size: 14px;
   }
