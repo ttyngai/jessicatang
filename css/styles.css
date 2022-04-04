@@ -986,6 +986,29 @@ body::-webkit-scrollbar-thumb {
   max-width: 300px;
   padding: 10px;
 }
+.dpjWebsite {
+  border-radius: 0px;
+}
+.dpjPictures2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.dpjLogoImages {
+  max-width: 600px;
+  width: 30vw;
+}
+.dpjMainLogo {
+  max-width: 200px;
+}
+
+.dpjPictures {
+  margin: 10px;
+}
 
 @media (max-width: 800px) {
   .projectContainer {
