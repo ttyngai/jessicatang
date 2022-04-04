@@ -866,6 +866,7 @@ body::-webkit-scrollbar-thumb {
 }
 .descriptionContent {
   margin: 10px;
+
   font-size: 16px;
   font-weight: 200;
   z-index: 2;
@@ -873,6 +874,11 @@ body::-webkit-scrollbar-thumb {
 .descriptionContentBold {
   /* font-weight: bold; */
   font-weight: 500;
+  margin-bottom: -10px;
+}
+
+.descriptionGridTitle {
+  margin-bottom: 0px;
 }
 .descriptionCard {
   display: flex;
@@ -945,7 +951,7 @@ body::-webkit-scrollbar-thumb {
 .cell {
   font-size: 16px;
   font-weight: 200;
-  padding: 10px;
+  padding: 5px;
 }
 .gridMargin {
   margin-left: 0;
@@ -980,6 +986,25 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
 
   justify-content: space-around;
+}
+.twitchGrid23 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+}
+.twitchGridV2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.twitchImages {
+  max-width: 400px;
+  padding: 10px;
+}
+.twitch1 {
+  max-width: 600px;
 }
 .cozyImage {
   width: 30vw;
