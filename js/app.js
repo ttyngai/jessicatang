@@ -84,6 +84,20 @@ function attachEventListener(button, targetId, revealId, method, scroll) {
   });
 }
 
+document.addEventListener('auxclick', function (e) {
+  if (e.button === 3) {
+    document.getElementById('project1').style.display = 'none';
+    document.getElementById('project2').style.display = 'none';
+    document.getElementById('project3').style.display = 'none';
+    document.getElementById('project4').style.display = 'none';
+    document.getElementById('homePage').style.display = 'block';
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+});
+
 attachEventListener('work1', 'homePage', 'project1', changeElement, 'top');
 attachEventListener('work2', 'homePage', 'project2', changeElement, 'top');
 attachEventListener('work3', 'homePage', 'project3', changeElement, 'top');
