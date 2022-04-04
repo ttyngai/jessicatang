@@ -1101,6 +1101,13 @@ body::-webkit-scrollbar-thumb {
     margin-left: 3px;
     margin-right: 3px;
   }
+  .eachRole {
+    width: 47vw;
+    /* margin: auto; */
+  }
+  .myRole {
+    margin: 10px 0;
+  }
 
   .navBar {
     font-size: 14px;
