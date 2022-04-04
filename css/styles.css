@@ -10,6 +10,7 @@
   --whiteBackground: rgb(255, 255, 255);
   --greyTransparent: rgba(0, 0, 0, 0.5);
   --whiteTransparent: rgba(255, 255, 255, 0.5);
+  --background: rgb(255, 252, 248);
   --curlyBracesWidth: 1px;
   --curlyBracesOffset: 24px;
   --curlyBracesMajorCurve: 30px;
@@ -20,7 +21,7 @@ html,
 body {
   color: var(--blackText);
   font-size: 12px;
-  background-color: var(--whiteBackground);
+  background-color: var(--background);
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
@@ -76,7 +77,7 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: var(--background);
   justify-content: flex-end;
   width: 100vw;
   text-align: right;
