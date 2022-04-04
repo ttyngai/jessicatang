@@ -15,7 +15,7 @@ scrollEvent('navButton1', 0);
 scrollEvent('navButton2', 0, 'work1');
 scrollEvent('navButton3', 0, 'contact');
 
-scrollEvent('introContactButton', 0, 'contact');
+// scrollEvent('introContactButton', 0, 'contact');
 // scrollEvent('navButton6', 0, 'skillsContainer');
 function scrollEvent(elementId, top, target) {
   const element = document.getElementById(elementId);
