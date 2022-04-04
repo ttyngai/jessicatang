@@ -13,9 +13,9 @@ function firstScroll() {
 scrollEvent('myLogo', 0);
 scrollEvent('navButton1', 0);
 scrollEvent('navButton2', 0, 'work1');
-scrollEvent('navButton3', 0, 'work1');
+scrollEvent('navButton3', 0, 'contact');
+
 scrollEvent('introContactButton', 0, 'contact');
-scrollEvent('navButton4', 0, 'contact');
 // scrollEvent('navButton6', 0, 'skillsContainer');
 function scrollEvent(elementId, top, target) {
   const element = document.getElementById(elementId);
@@ -62,9 +62,8 @@ function scrollEvent(elementId, top, target) {
 //Nav reveal
 navReveal('navButton1', 400);
 navReveal('navButton2', 600);
-navReveal('navButton3', 800);
-navReveal('navButton4', 1000);
-navReveal('navButton5', 1200, 'resume');
+
+navReveal('navButton3', 1000);
 
 function navReveal(id, time, option) {
   setTimeout(function () {

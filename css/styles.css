@@ -45,7 +45,8 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   top: 0;
   font-size: 15px;
-  padding: 4px;
+  padding: 15px;
+  padding-left: 20px;
   color: var(--blackText);
   /* background-color: var(--whiteTransparent); */
   /* border: 1px solid var(--dystopianYellow); */
@@ -59,7 +60,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logo {
-  height: 40px;
+  height: 60px;
+  padding-right: 10px;
 }
 
 .tags {
@@ -78,7 +80,7 @@ body::-webkit-scrollbar-thumb {
   width: 100vw;
   text-align: right;
   list-style: none;
-  padding-right: 4px;
+  padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   top: 0;
@@ -134,6 +136,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .introContainer {
@@ -445,22 +448,15 @@ body::-webkit-scrollbar-thumb {
   max-width: 80vw;
 }
 
-.squareButton {
-  font-size: 16px;
-  margin: auto;
-  padding: 2px 6px;
-  text-decoration: none;
-  color: var(--blackText);
-  background-color: #fdda24;
-  /* border: 1px solid var(--lightGrey); */
-  cursor: pointer;
-}
-
-.squareButton:hover {
-  text-decoration: none;
-  color: var(--dystopianYellow);
-  animation: hoverBlink 0.1s forwards;
-  background-color: pink;
+@keyframes buttonHover {
+  0% {
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateY(20%);
+  }
 }
 
 .workButtonContainer {
@@ -643,7 +639,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .introTitle {
-  font-size: 42px;
+  font-size: 25px;
   line-height: 1.2;
 }
 
@@ -654,15 +650,34 @@ body::-webkit-scrollbar-thumb {
 .introContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   margin: auto;
-  padding-top: 100px;
-  padding-bottom: 30px;
+  padding-top: 100px 5px 30px 5px;
+}
+.introContent {
+  width: 45vw;
+  max-width: 400px;
 }
 
 .squareButton {
   font-size: 20px;
+  margin-right: 5px;
   padding: 2px 8px;
+  text-decoration: none;
+  color: var(--blackText);
+  background-color: #fdda24;
+  border-radius: 5px;
+  /* border: 1px solid var(--lightGrey); */
+  cursor: pointer;
+  box-shadow: 5px 5px #888888;
+}
+
+.squareButton:hover {
+  text-decoration: none;
+  color: var(--blackText);
+  background-color: pink;
+  /* animation: buttonHover 0.1s forwards; */
+  box-shadow: 2px 2px #b3b3b3;
 }
 
 .myLogo {
@@ -671,14 +686,17 @@ body::-webkit-scrollbar-thumb {
 
 .navBar {
   font-size: 18px;
-  padding-right: 10px;
+  padding-right: 35px;
+  padding-top: 28px;
 }
 
 .navListItem {
   /* padding: 0 5px; */
   margin: 0 10px;
 }
-
+.workTitle {
+  text-align: left;
+}
 .backToTop {
   font-size: 24px;
   padding: 1px 12px;
