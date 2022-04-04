@@ -62,7 +62,6 @@ function scrollEvent(elementId, top, target) {
 //Nav reveal
 navReveal('navButton1', 400);
 navReveal('navButton2', 600);
-
 navReveal('navButton3', 1000);
 
 function navReveal(id, time, option) {
@@ -95,6 +94,18 @@ document.addEventListener('auxclick', function (e) {
       behavior: 'smooth',
     });
   }
+});
+
+document.getElementById('myLogo').addEventListener('click', function () {
+  document.getElementById('project1').style.display = 'none';
+  document.getElementById('project2').style.display = 'none';
+  document.getElementById('project3').style.display = 'none';
+  document.getElementById('project4').style.display = 'none';
+  document.getElementById('homePage').style.display = 'block';
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 });
 
 attachEventListener('work1', 'homePage', 'project1', changeElement, 'top');
